@@ -148,3 +148,57 @@
         button:hover {
             background-color: #2980b9;
         }
+
+        .video-wrapper {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: 20px;
+    overflow: hidden;
+    background: #111;
+    box-shadow:
+      0 0 15px #00ffff33,
+      0 0 30px #00ffff55,
+      0 0 60px #00ffff88;
+    animation: pulse 3s infinite alternate;
+  }
+
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 20px;
+  }
+
+  /* Subtle neon glow animation */
+  @keyframes pulse {
+    0% {
+      box-shadow:
+        0 0 15px #00ffff33,
+        0 0 30px #00ffff55,
+        0 0 60px #00ffff88;
+    }
+    100% {
+      box-shadow:
+        0 0 25px #00fff099,
+        0 0 60px #00ffffaa,
+        0 0 120px #00ffffcc;
+    }
+  }
+
+  /* Optional glowing text label */
+  .title {
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+    color: #00ffff;
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-shadow:
+      0 0 5px #00ffff,
+      0 0 10px #00ffff,
+      0 0 20px #00ffff;
+    z-index: 2;
+  }
+  
