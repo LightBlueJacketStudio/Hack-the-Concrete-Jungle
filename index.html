@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Creator Income Tracker</title>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1 class="site-name">BrightPath</h1>
+        <p class="mission" id="mission">
+        Empowering people to make smarter choices through clear, accessible information.
+        </p>
+
+    </div>
+
+    <div class="dashboard">
+        <div class="header">
+            <h1>Content Creator Income Tracker</h1>
+        </div>
+
+        <div class="income-summary">
+            <div class="income-card">
+                <div class="platform-name">YouTube</div>
+                <div class="income-amount">$2,450.00</div>
+                <div class="growth">↑ 15% this month</div>
+            </div>
+            <div class="income-card">
+                <div class="platform-name">Twitch</div>
+                <div class="income-amount">$1,820.00</div>
+                <div class="growth">↑ 8% this month</div>
+            </div>
+            <div class="income-card">
+                <div class="platform-name">Medium</div>
+                <div class="income-amount">$680.00</div>
+                <div class="growth">↑ 12% this month</div>
+            </div>
+            <div class="income-card">
+                <div class="platform-name">Substack</div>
+                <div class="income-amount">$950.00</div>
+                <div class="growth">↑ 20% this month</div>
+            </div>
+        </div>
+
+        <div class="charts-container">
+            <div class="chart-wrapper">
+                <canvas id="youtubeChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="twitchChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="mediumChart"></canvas>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="substackChart"></canvas>
+            </div>
+        </div>
+
+        <div class="input-section">
+            <h2>Add New Income Data</h2>
+            <div class="input-group">
+                <select id="platformSelect">
+                    <option value="youtube">YouTube</option>
+                    <option value="twitch">Twitch</option>
+                    <option value="medium">Medium</option>
+                    <option value="substack">Substack</option>
+                </select>
+                <input type="date" id="dateInput">
+                <input type="number" id="amountInput" placeholder="Amount ($)">
+                <button onclick="addIncome()">Add Income</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="interaction.js" defer></script>
+    <script src="chartGen.js" defer></script>
+
+</body>
+</html>
