@@ -14,14 +14,18 @@
                 margin-bottom: 10px;
             }
 
-        .mission {
-        font-size: 1.2rem;
-        color: #555;
-        max-width: 600px;
-        margin: 0 auto;
-        line-height: 1.5;
-        transition: transform 0.3s ease, opacity 0.3s ease;
-        }
+            .mission {
+            font-size: 1.4rem;
+            display: inline-block;
+            border-right: 2px solid #333;
+            white-space: pre-wrap; /* allows multi-line text */
+            overflow: hidden;
+            animation: blink 0.75s step-end infinite;
+            }
+
+            @keyframes blink {
+            50% { border-color: transparent; }
+            }
         
         .shrink {
         transform: scale(0.8);
@@ -46,6 +50,7 @@
             background-color: var(--background-color);
             padding: 20px;
             height: 2000px;
+            transition: background-color 0.1s linear; /* smooth color change */
         }
 
         .dashboard {
